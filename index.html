@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justix-Portfolio</title>
+    <meta name="description" content="Master's student specializing in full-stack development, data analytics, and network infrastructure. Experienced in Java, Flutter, Hadoop, and Cisco technologies.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="logo">
+                    Justix<span class="logo-dot">.</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link">HOME</a>
+                    <a href="#about" class="nav-link">ABOUT ME</a>
+                    <a href="#projects" class="nav-link">PROJECTS</a>
+                    <a href="#skills" class="nav-link">SKILLS</a>
+                    <a href="#contact" class="nav-link">CONTACT</a>
+                    <button class="nav-button" onclick="scrollToSection('contact')">Let's Talk</button>
+                </div>
+                <div class="mobile-menu-toggle" id="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="hero-name">Justix</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Master's student specializing in full-stack development, data analytics, and network infrastructure. 
+                        Passionate about creating innovative solutions that bridge software and systems thinking.
+                    </p>
+                    <div class="hero-buttons">
+                       <button class="btn-primary" onclick="window.open('https://github.com/asogwachiuba', '_blank')">
+                         <i class="fas fa-code"></i>
+                         View My Work
+                        </button>
+                    
+                        <button class="btn-secondary" onclick="scrollToSection('contact')">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-container">
+                        <img src="chuba pic.jpg" alt="Profile" class="profile-image">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Technologies</div>
+                </div>
+            </div>
+            
+            <div class="tech-badges">
+                <div class="tech-badge">
+                    <img src="data:image/png;base64,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" alt="Java">
+                    <span>Java</span>
+                </div>
+                <div class="tech-badge">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6T0UtU41houKmUR8Bhm8_uKyso0csWjMrMA&s" alt="Flutter">
+                    <span>Flutter</span>
+                </div>
+                <div class="tech-badge">
+                    <img src="data:image/png;base64,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" alt="Hadoop">
+                    <span>Hadoop</span>
+                </div>
+                <div class="tech-badge">
+                    <img src="data:image/png;base64,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" alt="Cisco">
+                    <span>Cisco</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Passionate Full-Stack Developer & Systems Engineer</h3>
+                    <p>
+                        I'm a Master's student with a passion for building practical tech solutions across 
+                        software development, data engineering, and IT infrastructure.
+                    </p>
+                    <p>
+                        My experience spans building full-stack apps in Flutter and Java, designing secure 
+                        enterprise networks using Cisco Packet Tracer, and processing large datasets with 
+                        Hadoop MapReduce. I enjoy tackling real-world problems through code and design.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>Master's in Computer Science</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>Experience</h4>
+                                <p>3+ years in development</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <h4>Achievements</h4>
+                                <p>15+ successful projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   <a href="Chi-uba Masters 2025 CV Updated.pdf" class="btn-primary" download style="width: 250px; text-align: center;">
+    <i class="fas fa-download"></i>
+    Download Resume
+</a>
+                </div>
+                
+                <div class="about-image">
+                    <div class="about-image-container">
+                        <img src="chuba pic.jpg" alt="About Me">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing my best work</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-bar project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>HausRenta Landing Page (Flutter Web, Firestore, Firebase Hosting)</h3>
+                        <p>Designed and deployed a modern, 
+                         responsive Flutter-based web landing page for a client-focused solution addressing rent savings among 
+                           Nigerian demographics. Integrated with Firebase Firestore for backend data handling and hosted the live 
+                           site using Firebase Hosting.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Firestore</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://hausrenta-42db2.web.app/#/" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Artificial Mice</h3>
+                        <p>Created an interactive web application using HTML, CSS, JavaScript, and Java (possibly through Java Applets or backend integration) to simulate artificial mice behavior.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">JAVA</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/asogwachiuba/ArtificialMice" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                            <!-- <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-network-wired project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Java Project (Java Eclipse), JDBC, MySQL, OOP, SOLID Principles</h3>
+                        <p>Built a desktop warehouse logistics 
+                           system for tracking shipments, goods, and internal operations. Applied object-oriented design and SOLID 
+                          principles to ensure modularity, scalability, and maintainability. Achieved 18/20 for clean architecture, 
+                            code quality, and problem-solving</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">OOP</span>
+                            <span class="tech-tag">MYSQL</span>
+                            <span class="tech-tag">JBDC</span>
+                            <span class="tech-tag">JAVA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/asogwachiuba/JAVA-PROJECT" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                            <!-- <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Documentation
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chalkboard-teacher project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Voting App</h3>
+                        <p>A mobile voting app designed to make democracy more accessible and convenient. Built with Flutter and Dart, our app provides a seamless user experience, while HTML integration enables secure and efficient voting processes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">Ruby</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Cmake</span>
+                            <span class="tech-tag">Swift</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/asogwachiuba/voting_app" class="project-link">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                            <!-- <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Exercises
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Java</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Dart</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>SQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Frameworks & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Flutter</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Hadoop</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Git</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Infrastructure & Security</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Cisco Networking</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>VLANs & VPNs</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Network Security</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Ready to start your next project?</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always open to discussing new opportunities and interesting projects.</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <a href="mailto:asogwa.chiuba@gmail.com">
+                              <i class="fas fa-envelope"></i>
+                            </a>
+                            <div>
+                                <h4>Email</h4>
+                                <p>asogwa.chiuba@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <a href="tel:+33695533382">
+                            <i class="fas fa-phone"></i>
+                            </a>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+33695533382</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <a href="https://wa.me/+33695533382" target="_blank">
+                              <i class="fab fa-whatsapp"></i>
+                               </a>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>let's Talk</p>
+                            </div>
+
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Saint Etienne Du Rouvray, Rouen, France</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/asogwachiuba" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="http://www.linkedin.com/in/chi-uba-asogwa" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <h3>Chi-Uba Asogwa</h3>
+                    <p>Full-Stack Developer & Systems Engineer</p>
+                    <p>Bringing your ideas to life with clean, modern web solutions</p>
+                    <p>&copy; 2025 Justix. All rights reserved.</p>
+                   
+                </div>
+                <div class="footer-tech">
+                    <p>Built with HTML, CSS & JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
