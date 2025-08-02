@@ -94,36 +94,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    
+
+
+    window.onbeforeunload = () => {
+  for(const form of document.getElementById('contact-form')) {
+    form.reset();
+  }
+}
+
+   
     // Form submission
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    // const contactForm = document.getElementById('contact-form');
+    // contactForm.addEventListener('submit', function(e) {
+    //     e.preventDefault();
         
         // Get form data
-        const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
+    //     const formData = new FormData(contactForm);
+    //     const name = formData.get('name');
+    //     const email = formData.get('email');
+    //     const subject = formData.get('subject');
+    //     const message = formData.get('message');
         
-        // Simple validation
-        // if (!name || !email || !subject || !message) {
-        //     alert('Please fill in all fields');
-        //     return;
-        // }
+    //     Simple validation
+    //     if (!name || !email || !subject || !message) {
+    //         alert('Please fill in all fields');
+    //         return;
+    //     }
         
-        // // Email validation
-        // const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-        // if (!emailRegex.test(email)) {
-        //     alert('Please enter a valid email address');
-        //     return;
-        // }
+    //     // Email validation
+    //     const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+    //     if (!emailRegex.test(email)) {
+    //         alert('Please enter a valid email address');
+    //         return;
+    //     }
         
-        // Simulate form submission
-       ;
-        contactForm.reset();
-    });
+    //     Simulate form submission
+    //    ;
+    //     contactForm.reset();
+    // });
     
     
     // // Animate skill bars on scroll (only once)

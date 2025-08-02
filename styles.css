@@ -38,6 +38,9 @@ body {
 }
 
 /* Navigation */
+a{
+    text-decoration: none;
+}
 .navbar {
     position: fixed;
     top: 0;

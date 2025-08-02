@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi-Uba's-Portfolio</title>
+    <link rel="icon" href="portfolio-icon.jpg">
     <meta name="description" content="Master's student specializing in full-stack development, data analytics, and network infrastructure. Experienced in Java, Flutter, Hadoop, and Cisco technologies.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -440,34 +441,37 @@
                     <div class="contact-items">
                         <div class="contact-item">
                             <a href="mailto:asogwa.chiuba@gmail.com">
-                              <i class="fas fa-envelope"></i>
-                            </a>
+                              <i class="fas fa-envelope fa-beat"></i>
+                            
                             <div>
                                 <h4>Email</h4>
                                 <p>asogwa.chiuba@gmail.com</p>
+                                </a>
                             </div>
                         </div>
                         <div class="contact-item">
                             <a href="tel:+33695533382">
-                            <i class="fas fa-phone"></i>
-                            </a>
+                            <i class="fas fa-phone fa-shake"></i>
+                           
                             <div>
                                 <h4>Phone</h4>
                                 <p>+33695533382</p>
-                            </div>
+                                 </a>
+                            </div> 
                         </div>
                         <div class="contact-item">
                             <a href="https://wa.me/+33695533382" target="_blank">
-                              <i class="fab fa-whatsapp"></i>
-                               </a>
+                              <i class="fab fa-whatsapp fa-beat"></i>
+                               
                             <div>
-                                <h4>WhatsApp</h4>
+                                <h4>WhatsApp</h4> 
+                                </a>
                                 <p>let's Talk</p>
                             </div>
 
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-map-marker-alt fa-beat"></i>
                             <div>
                                 <h4>Location</h4>
                                 <p>Saint Etienne Du Rouvray, Rouen, France</p>
@@ -477,19 +481,19 @@
                     
                     <div class="social-links">
                         <a href="https://github.com/asogwachiuba" class="social-link">
-                            <i class="fab fa-github"></i>
+                            <i class="fab fa-github fa-beat-fade"></i>
                         </a>
                         <a href="http://www.linkedin.com/in/chi-uba-asogwa" class="social-link">
-                            <i class="fab fa-linkedin"></i>
+                            <i class="fab fa-linkedin fa-beat-fade"></i>
                         </a>
                         <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-twitter fa-beat-fade"></i>
                         </a>
                     </div>
                 </div>
                 
                 <div class="contact-form">
-                    <form  method="POST" id="contact-form">
+                    <form action="https://formspree.io/f/xeozlzez"   method="post" id="contact-form">
                        
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -503,10 +507,16 @@
                         <div class="form-group">
                             <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn-primary">
-                            <i class="fas fa-paper-plane"></i>
+                        <button type="submit" class="btn-primary" value="submit">
+                            <i class="fas fa-paper-plane fa-bounce"></i>
                             Send Message
+                        </button> 
+                        <br>
+                        <button type="reset" class="btn-primary" value="submit">
+                           <i class="fa-solid fa-power-off fa-bounce"></i>
+                            Reset Form
                         </button>
+
                     </form>
                 </div>
             </div>
@@ -532,5 +542,22 @@
     </footer>
 
     <script src="index.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "chigozirimvictorasogwa@gmail.com",
+                Password : "Chigod@3399",
+                To : 'chigozirimvictorasogwa@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "And thisnis the body"
+            }).then(
+                messsage => alert (messsage)
+            );
+        }
+            onsubmit="sendEmail(); reset(); return false;"
+    </script> -->
 </body>
 </html>
