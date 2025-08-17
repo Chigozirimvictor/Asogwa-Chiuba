@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingText = document.getElementById('typing-text');
     const phrases = [
         'Full-Stack Developer',
-        'Data Analytics Expert',
-        'Network Engineer',
+        'Flutter Developer',
+        'Mobile App Developer',
         'Problem Solver',
         'Java Developer',
         'Flutter Developer'
@@ -307,3 +307,32 @@ function throttle(func, limit) {
 window.addEventListener('scroll', throttle(function() {
     // Existing scroll functions here
 }, 16)); // ~60fps
+// Show modal
+document.querySelectorAll('.view-project-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+        const projectId = this.getAttribute('data-project');
+        const modal = document.getElementById(projectId);
+        if (modal) {
+            modal.style.display = 'block';
+            setTimeout(() => {
+                modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                modal.setAttribute('tabindex', '-1');
+                modal.focus();
+            }, 50);
+        }
+    });
+});
+
+// Close modal
+document.querySelectorAll('.close-modal').forEach(btn => {
+    btn.addEventListener('click', function () {
+        this.closest('.project-modal').style.display = 'none';
+    });
+});
+
+// Close modal on outside click
+window.addEventListener('click', function (e) {
+    if (e.target.classList.contains('project-modal')) {
+        e.target.style.display = 'none';
+    }
+});
