@@ -23,7 +23,7 @@
                     <a href="#projects" class="nav-link">PROJECTS</a>
                     <a href="#skills" class="nav-link">SKILLS</a>
                     <a href="#contact" class="nav-link">CONTACT</a>
-                    <button class="nav-button" onclick="scrollToSection('contact')">Let's Talk</button>
+                    <button class="nav-button" onclick="scrollToSection('contact')">Let's Connect</button>
                 </div>
                 <div class="mobile-menu-toggle" id="mobile-toggle">
                     <i class="fas fa-bars"></i>
@@ -182,7 +182,7 @@
             
             <div class="projects-grid">
                 <!-- Project 1 Thumbnail -->
-<div class="project-thumbnail" style="background-image: url('hausrenta.jpg');">
+<div class="project-thumbnail" style="background-image: url('hausrenta1.png');">
     <h3>HausRenta Landing Page </h3><br>
   <button class="view-project-btn" data-project="project1">View Project</button>
 </div>
@@ -191,8 +191,12 @@
 <div class="project-modal" id="project1">
   <div class="project-card">
     <span class="close-modal">&times;</span>
-    <div class="project-image">
-      <img src="hausrenta.jpg" alt="hausrenta-image" class="project-pic">
+   <div class="project-image library-images">
+    
+      <img src="hauserenta2.png" alt="library1-image" class="project-pic">
+      <img src="hausrenta3.png" alt="library1-image" class="project-pic">
+      <img src="hauserenta4.png" alt="library1-image" class="project-pic">
+    
     </div>
     <div class="project-content">
       <h3>HausRenta Landing Page (Flutter Web, Firestore, Firebase Hosting)</h3>
@@ -213,7 +217,7 @@
 </div>
 
 <!-- Project 2 Thumbnail -->
-<div class="project-thumbnail" style="background-image: url('AI2 mouse.jpg');">
+<div class="project-thumbnail" style="background-image: url('artificial-mice.gif');">
     <h3>Artificial Mice Simulation</h3><br>
   <button class="view-project-btn" data-project="project2">View Project</button>
 </div>
@@ -223,7 +227,7 @@
   <div class="project-card">
     <span class="close-modal">&times;</span>
     <div class="project-image">
-      <img src="AI2 mouse.jpg" alt="AI mouse-image" class="project-pic">
+      <img src="artificial-mice.gif" alt="AI mouse-image" class="project-pic">
     </div>
     <div class="project-content">
       <h3>Artificial Mice</h3>
@@ -244,7 +248,7 @@
 </div>
 
 <!-- Project 3 Thumbnail -->
-<div class="project-thumbnail" style="background-image: url('library2.jpg');">
+<div class="project-thumbnail" style="background-image: url('lib-mgt-sys-admin.gif');">
     <h3>Library Management System</h3><br>
   <button class="view-project-btn" data-project="project3">View Project</button>
 </div>
@@ -279,9 +283,42 @@
   </div>
 </div>
 
+<!-- Project 6 Thumbnail -->
+<div class="project-thumbnail" style="background-image: url('resume-reader.gif');">
+    <h3>smartCvAssistant</h3><br>
+  <button class="view-project-btn" data-project="project6">View Project</button>
+</div>
+
+<!-- Project 6 Modal -->
+<div class="project-modal" id="project6">
+  <div class="project-card">
+    <span class="close-modal">&times;</span>
+    <div class="project-image">
+      <img src="resume-reader.gif" alt="resume project-image" class="project-pic">
+    </div>
+    <div class="project-content">
+      <h3>Resume Reader</h3>
+      <p>Resume reader is a Streamlit-based web app that allows users to upload a DOCX-format resume, select 
+        the various section title and displays the contents of the selected title.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Streamlit</span>
+        <span class="tech-tag">Spire.Doc (via pythonnet)</span>
+        <span class="tech-tag">re (regex)</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/asogwachiuba/smartCvAssistant.git" class="project-link" target="_blank">
+          <i class="fab fa-github"></i> View Code
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- Project 4 Thumbnail -->
-<div class="project-thumbnail" style="background-image: url('java-project2.jpg');">
-    <h3>Java Project (Eclipse, JDBC, MySQL, OOP, SOLID Principles)</h3><br>
+<div class="project-thumbnail" style="background-image: url('logistics-driver.gif');">
+    <h3>Logistics Delivery Management System</h3><br>
   <button class="view-project-btn" data-project="project4">View Project</button>
 </div>
 
@@ -289,26 +326,34 @@
 <div class="project-modal" id="project4">
   <div class="project-card">
     <span class="close-modal">&times;</span>
-    <div class="project-image">
-      <img src="java-project2.jpg" alt="java project-image" class="project-pic">
+    <div class="project-image library-images">
+      <img src="logistics-customer.gif" alt="library2-image" class="project-pic">
+      <img src="logistics-driver.gif" alt="library1-image" class="project-pic">
+      <img src="logistics-onboarding.gif" alt="library1-image" class="project-pic">
+      
+     
     </div>
     <div class="project-content">
-      <h3>Java Project (Eclipse, JDBC, MySQL, OOP, SOLID Principles)</h3>
-      <p>Built a desktop warehouse logistics system for tracking shipments, goods, and internal operations. Applied object-oriented design and SOLID principles to ensure modularity, scalability, and maintainability. Achieved 18/20 for clean architecture, code quality, and problem-solving.</p>
+      <h3>Logistics Delivery Management System</h3>
+      <p>This Java-based mini-project is part of a goods delivery application designed for customers, schedulers, and drivers.
+  It provides role-based functionalities to manage product orders, delivery scheduling, and route assignments.
+ The application also supports Word document generation for delivery assignments, with the potential for route optimization using Google OR-Tools.</p>
       <div class="project-tech">
-        <span class="tech-tag">OOP</span>
-        <span class="tech-tag">MYSQL</span>
-        <span class="tech-tag">JBDC</span>
+        <span class="tech-tag">Java Swing</span>
+        <span class="tech-tag">JDBC with MySQL (XAMPP)</span>
+        <span class="tech-tag">Word file creation (e.g., Apache POI)</span>
         <span class="tech-tag">JAVA</span>
       </div>
       <div class="project-links">
-        <a href="https://github.com/asogwachiuba/JAVA-PROJECT" class="project-link" target="_blank">
+        <a href="https://github.com/asogwachiuba/Logistics-Application--java-project.git" class="project-link" target="_blank">
           <i class="fab fa-github"></i> View Code
         </a>
       </div>
     </div>
   </div>
 </div>
+
+
 
 <!-- Project 5 Thumbnail -->
 <div class="project-thumbnail" style="background-image: url('voting.webp');">
@@ -343,6 +388,8 @@
   </div>
 </div>
 
+
+
             </div>
         </div>
     </section>
@@ -350,6 +397,7 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
+        <!-- Skills And EXpertise Starts -->
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Skills & Expertise</h2>
@@ -377,6 +425,15 @@
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 85%"></div>
                             </div>
+                        </div> 
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <!-- <span>85%</span> -->
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-info">
@@ -389,7 +446,9 @@
                         </div>
                     </div>
                 </div>
-                
+                <!-- Ends Here -->
+
+                <!-- Framework And Tools -->
                 <div class="skill-category">
                     <h3>Frameworks & Tools</h3>
                     <div class="skill-items">
@@ -423,38 +482,7 @@
                     </div>
                 </div>
                 
-                <div class="skill-category">
-                    <h3>Infrastructure & Security</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Cisco Networking</span>
-                                <!-- <span>85%</span> -->
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>VLANs & VPNs</span>
-                                <!-- <span>80%</span> -->
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Network Security</span>
-                                <!-- <span>75%</span>    -->
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Frame work And Tools Ends Here -->
             </div>
         </div>
     </section>
@@ -464,8 +492,8 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-subtitle">Ready to start your next project?</p>
+                <h2 class="section-title">Available For Internships</h2>
+                <p class="section-subtitle">Lets Build Something Great Together</p>
             </div>
             
             <div class="contact-content">
@@ -521,9 +549,9 @@
                         <a href="http://www.linkedin.com/in/chi-uba-asogwa" class="social-link">
                             <i class="fab fa-linkedin fa-beat-fade"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <!-- <a href="#" class="social-link">
                             <i class="fab fa-twitter fa-beat-fade"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 
